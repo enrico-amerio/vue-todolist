@@ -39,10 +39,9 @@
       <ul>
         <li v-for="(task, index) in toDoList" :class="{'done': task.fatto === true}" @click=" task.fatto = !task.fatto">
           <span>{{task.nome}}</span>
-          <i class="fa-solid fa-trash-can"></i>
+          <i class="fa-solid fa-trash-can"@click.stop="deleteTask(task, indice)"></i>
         </li>
         
-
       </ul>
 
     </div>

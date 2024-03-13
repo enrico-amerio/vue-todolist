@@ -11,7 +11,12 @@ createApp({
         { nome: "Agganciare il calcio facendo pressione sulla base del medesimo", fatto: false},
         { nome: "Infilare nel micro post processore la canna del mirino che si basa sull'ordine della grandezza del medesimo ", fatto: false}
       ],
-      
+      error:'',
+    }
+  },
+  methods:{
+    deleteTask(index){
+        this.toDoList.splice(index, 1)
     }
   }
 }).mount('#app');
