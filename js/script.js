@@ -4,7 +4,7 @@ createApp({
   data(){
     return{
       toDoList: [
-        { nome: "Sistemare il trepiedi modulare", fatto: true },
+        { nome: "Sistemare il treppiedi modulare", fatto: true },
         { nome: "Avvitare il bullone A con il cacciavite a stella", fatto: true },
         { nome: "Assicurare il processore all'intercapedine C", fatto: false },
         { nome: "Inserire il gancio B nell'apposito alloggiamento", fatto: false },
