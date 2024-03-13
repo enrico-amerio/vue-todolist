@@ -17,8 +17,13 @@ createApp({
   },
   methods:{
     addTask(){
-      this.toDoList.unshift({ nome: `${this.newTask}`, fatto: false},);
-      this.newTask= ''
+      if(this.newTask.length > 4){
+        this.toDoList.unshift({ nome: `${this.newTask}`, fatto: false},);
+        this.newTask= '';
+        this.error = '';
+      }else{
+        this.error = 'Inserisci una task valida';
+      }
     },
     deleteTask(index){
         this.toDoList.splice(index, 1);
