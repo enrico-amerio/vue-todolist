@@ -36,13 +36,14 @@
     </div>
 
     <div class="task-container">
-      <ul>
+      <ul v-if="toDoList.length > 0">
         <li v-for="(task, index) in toDoList" :class="{'done': task.fatto === true}" @click=" task.fatto = !task.fatto">
           <span>{{task.nome}}</span>
           <i class="fa-solid fa-trash-can"@click.stop="deleteTask(task, indice)"></i>
         </li>
         
       </ul>
+      <h3 v-else>Tutte le task sono state completate</h3>
 
     </div>
 
