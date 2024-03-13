@@ -26,7 +26,13 @@ createApp({
       }
     },
     deleteTask(index){
+      if (this.toDoList[index].fatto === true) {
         this.toDoList.splice(index, 1);
+        this.error = '';
+      }else{
+        this.error = 'Devi completare la task prima di poterla eliminare';
+
+      }
     }
   }
 }).mount('#app');
